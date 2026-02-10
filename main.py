@@ -1,13 +1,13 @@
 import telebot
 import requests
 import os
-BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-"
-CHANNEL ="AI-GENERATED"   # kanaling username
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-bot = telebot.TeleBot("BOT_TOKEN")
+CHANNEL = "@AI-GENERATED"   # kanal username @ bilan
+
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # obuna tekshirish
 def check_sub(user_id):
@@ -21,10 +21,10 @@ def check_sub(user_id):
 def start(message):
     if not check_sub(message.from_user.id):
         bot.reply_to(message,
-        f"❌ To use bot subscribe first:\n{CHANNEL}\n\n"
-        f"❌ Чтобы пользоваться ботом подпишись:\n{CHANNEL}")
+        f"❌ Subscribe first:\n{CHANNEL}\n\n"
+        f"❌ Подпишись сначала:\n{CHANNEL}")
         return
-    
+        
     bot.reply_to(message,
     "🍔 Send food name for recipe\n🍔 Напиши еду для рецепта")
 
