@@ -1,12 +1,13 @@
 import telebot
 import requests
 import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-BOT_TOKEN = "8500831062:AAGdcSMnsKkxZYs3HRqOZcGtAWZOOafdaI4"
+"
 CHANNEL ="AI-GENERATED"   # kanaling username
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-bot = telebot.TeleBot(8500831062:AAGdcSMnsKkxZYs3HRqOZcGtAWZOOafdaI4)
+bot = telebot.TeleBot("BOT_TOKEN")
 
 # obuna tekshirish
 def check_sub(user_id):
